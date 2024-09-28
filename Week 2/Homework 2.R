@@ -1,5 +1,15 @@
-# Question 2.50
+######################################################################################
+# Filename:      Homework 2.R
+# Description:   R Scripts for SC212 Homework 2
+# Author:        Francis O'Hara
+# Date Modified: 9/23/24
+######################################################################################
 library(Lock5Data)
+
+
+######################################################################################
+# Question 2.50
+######################################################################################
 data(CollegeScores)
 my.table <- table(CollegeScores$MainDegree)
 my.prop.table <- prop.table(my.table)
@@ -10,7 +20,9 @@ my.prop.table
 percentages
 
 
+######################################################################################
 # Question 2.90
+######################################################################################
 data(AllCountries)
 hist(AllCountries$DeathRate, 
      col="lightblue",
@@ -18,18 +30,27 @@ hist(AllCountries$DeathRate,
      main="Histogram of Death Rate of All Countries in the Dataset",
      breaks=40)
 
+
+######################################################################################
 # Question 2.150
+######################################################################################
 data(PASeniors)
 mean(PASeniors$HWHours, na.rm=TRUE)
 sd(PASeniors$HWHours, na.rm=TRUE)
 
+
+######################################################################################
 # Question 2.176
+######################################################################################
 data(HoneybeeCircuits)
 boxplot(HoneybeeCircuits$Circuits ~ HoneybeeCircuits$Quality, data=HoneybeeCircuits)
 max(subset(HoneybeeCircuits, HoneybeeCircuits$Quality=="Low")$Circuits)
 max(subset(HoneybeeCircuits, HoneybeeCircuits$Quality=="High")$Circuits)
 
+
+######################################################################################
 # Question 2.184
+######################################################################################
 data("StudentSurvey")
 summary(StudentSurvey)
 boxplot(StudentSurvey$Height ~ StudentSurvey$Sex, data=StudentSurvey,
@@ -40,5 +61,6 @@ mean(subset(StudentSurvey, StudentSurvey$Sex=="M")$Height, na.rm = TRUE)
 sd(subset(StudentSurvey, StudentSurvey$Sex=="M")$Height, na.rm = TRUE)
 mean(subset(StudentSurvey, StudentSurvey$Sex=="F")$Height, na.rm = TRUE)
 sd(subset(StudentSurvey, StudentSurvey$Sex=="F")$Height, na.rm = TRUE)
+
+# get documentation for StudentSurvey dataset
 ?StudentSurvey
-??ggplot
