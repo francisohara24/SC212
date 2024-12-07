@@ -37,3 +37,11 @@ plot(my.lm$fitted.values, my.lm$residuals,
      main = "RVF Plot",
      abline(0, 0, col = "red")
      )
+
+# confidence interval
+data("StudentSurvey")
+summary(StudentSurvey)
+my.lm <- lm(StudentSurvey$GPA ~ StudentSurvey$VerbalSAT)
+
+
+predict(my.lm, newdata = c(500), int="confidence")
